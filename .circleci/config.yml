@@ -15,13 +15,12 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-      - run: npm ci
+      - run: npm i
       - run: npm run test
   analyze:
     <<: *defaults
     steps:
       - checkout
-      - run: npm ci
       - run: npm run audit
 
 workflows:
